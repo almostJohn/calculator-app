@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: 0;
+	transition: all 0.5 ease;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: rgb(88 101 242);
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.container {
+	height: 100vh;
+	width: 100vh;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.calculator {
+	position: relative;
+	height: auto;
+	width: auto;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px #000;
+}
+
+.theme-toggler {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.theme-toggler.active {
+	color: #23272a;
+}
+
+.theme-toggler::before {
+	content: "";
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background-color: #333;
+	z-index: -1;
+}
+
+#display {
+	margin: 0 10px;
+	height: 150px;
+	width: auto;
+	max-width: 270px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	font-size: 30px;
+	margin-bottom: 20px;
+	overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+	display: block;
+	height: 3px;
+}
+
+button {
+	height: 60px;
+	width: 60px;
+	border: 0;
+	border-radius: 30px;
+	margin: 5px;
+	font-size: 20px;
+	font-family: "Poppins", sans-serif;
+	cursor: pointer;
+	transition: all 200ms ease;
+}
+
+button:active {
+	transform: scale(1.1);
+}
+
+button#equal {
+	height: 130px;
+}
+
+/* light theme */
+
+.calculator {
+	background-color: #fff;
+}
+
+.calculator #display {
+	color: #23272a;
+}
+
+.calculator button#clear {
+	background-color: #ed4245;
+	color: #000;
+}
+
+.calculator button#backspace {
+	background-color: #ed4245;
+	color: #000;
+}
+
+.calculator button.btn_number {
+	background-color: #99aab5;
+	color: #000;
+}
+
+.calculator button.btn_operator {
+	background-color: #5865f2;
+	color: #000;
+}
+
+.calculator button.btn_equal {
+	background-color: #5865f2;
+	color: #000;
+}
+
+/* dark theme */
+
+.calculator.dark {
+	background-color: #23272a;
+}
+
+.calculator.dark #display {
+	color: #ffffff;
+}
+
+.calculator.dark button#clear {
+	background-color: #ed4245;
+	color: #fff;
+}
+
+.calculator.dark button#backspace {
+	background-color: #ed4245;
+	color: #fff;
+}
+
+.calculator.dark button.btn_number {
+	background-color: #99aab5;
+	color: #fff;
+}
+
+.calculator.dark button.btn_operator {
+	background-color: #5865f2;
+	color: #fff;
+}
+
+.calculator.dark button.btn_equal {
+	background-color: #5865f2;
+	color: #ffff;
+}
