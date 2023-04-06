@@ -4,8 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "del-cli dist && tsc",
-		"dev": "ts-node"
+		"build": "del-cli dist && tsc"
 	},
 	"keywords": [],
 	"author": "almostJohn <garcia.johngale@gmail.com>",
